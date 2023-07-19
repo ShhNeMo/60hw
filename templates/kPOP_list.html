@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kPOP groups list</title>
+</head>
+<body>
+    {% for group in groups %}
+        <h2><a href="{% url 'kPOP_detail' group.id %}">{{ group.name }}</a></h2>
+        <p>{{ group.body }}</p>
+    {% endfor %}
+</body>
+</html>
